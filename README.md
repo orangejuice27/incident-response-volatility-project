@@ -1,23 +1,35 @@
-# incident-response-volatility-project
-This project simulates a cybersecurity incident involving a potentially compromised Windows system. Memory forensics was conducted using Volatility to analyze running processes and network activity in order to identify suspicious behavior.
-Tool Used
-Volatility (memory analysis tool)
-Data Used
-A publicly available Windows memory image (boomer-win2003) was used for analysis. This dataset represents a snapshot of system memory and allows investigation of processes and network connections.
-Analysis Performed
-Identified running processes using pslist
-Examined network connections using netscan
-Investigated potential indicators of compromise
-Findings
-A suspicious process was identified that did not match typical system processes. Additionally, network connections were observed that could indicate external communication.
-Incident Response Actions
-Isolate the affected system
-Conduct further forensic analysis
-Remove malicious processes
-Monitor for reinfection
-Incident Response Lifecycle
-Detection & Analysis: Suspicious activity identified
-Containment: System isolation recommended
-Eradication: Remove threats
-Recovery: Restore system
-Lessons Learned: Improve monitoring
+# Memory Forensics Investigation Using Volatility
+
+## Overview
+For this project, I performed a memory forensic analysis using Volatility to examine a RAM image and figure out what was happening on a system at the time it was captured. The goal was to identify any suspicious or malicious activity, including hidden processes, unusual commands, and network connections.
+
+This project focuses on actually understanding the output, not just running commands.
+
+---
+
+## Objectives
+- Identify running processes at the time of capture  
+- Detect suspicious or hidden processes  
+- Analyze command line activity  
+- Investigate network connections  
+- Find indicators of compromise (IOCs)  
+
+---
+
+## Tools Used
+- Volatility  
+- Volatility 3  
+- Python  
+
+---
+
+## Dataset
+The memory image used in this project was provided as part of a digital forensics lab. Due to file size, the raw memory dump is not included in this repository.
+
+---
+
+## Methodology
+
+I used multiple Volatility plugins to analyze different aspects of the system:
+
+### Process Analysis
